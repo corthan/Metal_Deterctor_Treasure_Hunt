@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Metal_Deterctor_Treasure_Hunt</string>
+    <string name="play">Play</string>
+    <string name="purePuzzle">  Pure Puzzle  </string>
+    <string name="squirrelSearch">Squirrel Search</string>
+    <string name="level1Button">Puzzle level 1</string>
+    <string name="sLevel1Button">Squirrel Level 1</string>
+    <string name="level2Button">Puzzle level 2</string>
+    <string name="sLevel2Button">Squirrel Level 2</string>
+    <string name="level3Button">Puzzle level 3</string>
+    <string name="sLevel3Button">Squirrel Level 3</string>
+    <string name="level4Button">Puzzle level 4</string>
+    <string name="sLevel4Button">Squirrel Level 4</string>
+    <string name="programText">Program here</string>
+</resources>
