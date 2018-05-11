@@ -1,9 +1,12 @@
 package com.gandgapps.metal_deterctor_treasure_hunt;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Picture;
 import android.graphics.RectF;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -47,11 +50,15 @@ class PlotsView extends SurfaceView implements Runnable{
             canvas = ourHolder.lockCanvas();
 
             // Draw the background color
-            canvas.drawColor(Color.argb(255, 26, 128, 182));
+            canvas.drawColor(Color.argb(255, 105, 249, 121));
 
             // Choose the brush color for drawing
-            paint.setColor(Color.argb(255,  255, 255, 255));
-
+            paint.setColor(Color.argb(255, 105, 249, 121));
+            Bitmap bitmap1;
+            Bitmap bitmap2;
+            bitmap1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.path3350);
+            //bitmap2 = BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_untouchedground2);
+            bitmap1 = Bitmap.createScaledBitmap(bitmap1, (int) plotsToDisplay[0][0].getMyWidth(), (int) plotsToDisplay[0][0].getMyWidth(), false); // todo put in plot
             canvas.drawText("Test", 100,50, paint);
             int padding = 1;
             for (int i = 0; i < plotsToDisplay[0].length; i ++) {
@@ -59,8 +66,10 @@ class PlotsView extends SurfaceView implements Runnable{
                         plotsToDisplay[0][i].getMyY() + padding,
                         plotsToDisplay[0][i].getMyX() + plotsToDisplay[0][i].getMyWidth() - padding,
                         plotsToDisplay[0][i].getMyY() + plotsToDisplay[0][i].getMyHeight() - padding);
-                canvas.drawRect(rect, paint);
+                //canvas.drawRect(rect, paint);
+                canvas.drawBitmap(bitmap1, plotsToDisplay[0][i].getMyX(), plotsToDisplay[0][i].getMyY(), paint);
             }
+            //canvas.drawBitmap(bitmap2, plotsToDisplay[0][1].getMyX(), plotsToDisplay[0][1].getMyY(), paint);
             ourHolder.unlockCanvasAndPost(canvas);
         } else {
             Log.d(TAG, "holder not valid");
