@@ -12,4 +12,7 @@
     <string name="level4Button">Puzzle level 4</string>
     <string name="sLevel4Button">Squirrel Level 4</string>
     <string name="programText">Program here</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

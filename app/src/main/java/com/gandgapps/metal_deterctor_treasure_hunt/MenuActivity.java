@@ -3,10 +3,12 @@ package com.gandgapps.metal_deterctor_treasure_hunt;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
 
+    private static final String TAG = "menu";
     public int buttonNo = 0;
     public int noButtons = 8; // todo could change
     public int thisButtonID = 12345;
@@ -61,6 +63,7 @@ public class MenuActivity extends AppCompatActivity {
 
         if (buttonNo < noButtons / 2){
             Intent playIntent = new Intent(this, DetectActivity.class);
+            Log.d(TAG,"level passed" + level );
             playIntent.putExtra("key", level);
             startActivity(playIntent);
         } else {
